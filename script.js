@@ -269,12 +269,12 @@ function startGame() {
   // For Touchscreens
   canvas.addEventListener("touchmove", (e) => {
     playerMoved = true;
-    console.log(e.touches[0].clientX)
-    console.log('screenwidth', screenWidth)
+    // console.log('screenwidth', screenWidth)
+    // console.log(e.touches[0].clientX)
     // console.log(e.touches[0].clientY)
     // Compensate for canvas being centered
     paddleBottomX = e.touches[0].clientX - canvasPosition - paddleDiff;
-    if ((paddleBottomX + 15) < paddleDiff) {
+    if ((paddleBottomX + 7) < paddleDiff) {
       paddleBottomX = 0;
     }
     if (paddleBottomX > width - paddleWidth) {
