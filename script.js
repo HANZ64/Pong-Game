@@ -41,18 +41,18 @@ if (isTablet.matches) {
 }
 
 // Change Mobile Settings
-// const isMobile = window.matchMedia("(max-width: 500px)");
-// function myFunction(isMobile) {
-//   if (isMobile.matches) {
-//     width = 450;
-//     paddleWidth = 70;
-//     paddleBottomX = 185;
-//     paddleTopX = 185;
-//     paddleDiff = 40;
-//   }
-// }
-// myFunction(isMobile)
-// isMobile.addListener(myFunction)
+const isMobile = window.matchMedia("(max-width: 500px)");
+function myFunction(isMobile) {
+  if (isMobile.matches) {
+    width = 450;
+    paddleWidth = 70;
+    paddleBottomX = 185;
+    paddleTopX = 185;
+    paddleDiff = 40;
+  }
+}
+myFunction(isMobile)
+isMobile.addListener(myFunction)
 
 // Score
 let playerScore = 0;
@@ -269,11 +269,12 @@ function startGame() {
   // For Touchscreens
   canvas.addEventListener("touchmove", (e) => {
     playerMoved = true;
-    // console.log(e.touches[0].clientX)
+    console.log(e.touches[0].clientX)
+    console.log('screenwidth', screenWidth)
     // console.log(e.touches[0].clientY)
     // Compensate for canvas being centered
     paddleBottomX = e.touches[0].clientX - canvasPosition - paddleDiff;
-    if ((paddleBottomX + paddleDiff) < paddleDiff) {
+    if ((paddleBottomX + 15) < paddleDiff) {
       paddleBottomX = 0;
     }
     if (paddleBottomX > width - paddleWidth) {

@@ -117,13 +117,13 @@ footer a:visited {
 /* Large Smartphone (Vertical) */
 @media screen and (max-width: 500px) {
   canvas {
-    width: 100%;
+    width: 90%;
     height: 500px;
     margin-top: 10px;
   }
 
   .game-over-container {
-    width: 100%;
+    width: 90%;
     height: 500px;
     margin-top: 10px;
   }
