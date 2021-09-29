@@ -101,18 +101,6 @@ footer a:visited {
   }
 }
 
-/* Montior and Larger */
-@media screen and (min-width: 1800px) {
-  /* canvas {
-    margin-top: 100px;
-  } */
-
-  /* .game-over-container {
-    margin-top: -19px;
-  } */
-}
-
-/* Large Smartphone (Vertical) */
 @media screen and (max-width: 500px) {
   canvas {
     width: 85%;
@@ -123,7 +111,7 @@ footer a:visited {
   .game-over-container {
     width: 85%;
     height: 500px;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .title {
