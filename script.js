@@ -269,10 +269,8 @@ function startGame() {
   // For Touchscreens
   canvas.addEventListener("touchmove", (e) => {
     playerMoved = true;
-    // console.log('screenwidth', screenWidth)
     // console.log(e.touches[0].clientX)
     // console.log(e.touches[0].clientY)
-    // Compensate for canvas being centered
     paddleBottomX = e.touches[0].clientX - canvasPosition - paddleDiff;
     if ((paddleBottomX + 7) < paddleDiff) {
       paddleBottomX = 0;
@@ -284,6 +282,25 @@ function startGame() {
     canvas.style.cursor = "none";
   });
 }
+
+// Reload page after canvas resize
+function setResizeHandler(callback, timeout) {
+  let timer_id = undefined;
+  window.addEventListener("resize", function() {
+      if(timer_id != undefined) {
+          clearTimeout(timer_id);
+          timer_id = undefined;
+      }
+      timer_id = setTimeout(function() {
+          timer_id = undefined;
+          callback();
+      }, timeout);
+  });
+}
+function callback() {
+  location.reload();
+}
+setResizeHandler(callback, 200);
 
 // On Load
 startGame();
