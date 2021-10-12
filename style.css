@@ -119,6 +119,10 @@ footer a:visited {
     margin-top: 10px;
   }
 
+  .game-over-container h1 {
+    font-size: 1.7rem;
+  }
+
   .title {
     font-size: 1rem;
     margin: 0;
@@ -140,5 +144,9 @@ footer a:visited {
 
   .game-over-container {
     height: 350px;
+  }
+
+  .game-over-container h1 {
+    font-size: 1.6rem;
   }
 }
