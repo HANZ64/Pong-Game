@@ -33,11 +33,11 @@ const isTablet = window.matchMedia("(max-width: 1024px)");
 if (isTablet.matches) {
   speedY = -4;
   speedX = speedY;
-  computerSpeed = 9;
+  computerSpeed = 7;
 } else {
   speedY = -4;
   speedX = speedY;
-  computerSpeed = 9;
+  computerSpeed = 7;
 }
 
 // Change Mobile Settings
@@ -49,6 +49,7 @@ function myFunction(isMobile) {
     paddleBottomX = 185;
     paddleTopX = 185;
     paddleDiff = 40;
+    computerSpeed = 0;
   }
 }
 myFunction(isMobile)
@@ -141,15 +142,15 @@ function ballBoundaries() {
       if (playerMoved && !isTablet.matches) {
         speedY -= 4;
         // Max Speed
-        if (speedY < -8) {
-          speedY = -8;
+        if (speedY < -12) {
+          speedY = -12;
           computerSpeed = 7.8;
         }
       } else {
         speedY -= 3.5;
         // Max Speed
-        if (speedY < -7.5) {
-          speedY = -7.5;
+        if (speedY < -10.5) {
+          speedY = -10.5;
           computerSpeed = 7.3;
         }
       }
@@ -169,14 +170,14 @@ function ballBoundaries() {
       if (playerMoved && !isTablet.matches) {
         speedY += 4;
         // Max Speed
-        if (speedY > 8) {
-          speedY = 8;
+        if (speedY > 12) {
+          speedY = 12;
         }
       } else {
         speedY -= 3.5;
         // Max Speed
-        if (speedY < 7.5) {
-          speedY = 7.5;
+        if (speedY < 10.5) {
+          speedY = 10.5;
         }
       }
       speedY = -speedY;

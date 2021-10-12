@@ -109,13 +109,13 @@ footer a:visited {
 @media screen and (max-width: 500px) {
   canvas {
     width: 85%;
-    height: 500px;
+    height: 450px;
     margin-top: 10px;
   }
 
   .game-over-container {
     width: 85%;
-    height: 500px;
+    height: 450px;
     margin-top: 10px;
   }
 
